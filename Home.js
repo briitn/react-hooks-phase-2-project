@@ -17,6 +17,22 @@ function Home(){
 
         <h3>We have affordable tickets to Africa!  Click <Link to='/pictures'>here</Link> to buy tickets</h3>
     </div>
+
+    <div>
+        <h3>
+            info:
+
+           
+           
+        </h3>
+        <p>
+        email:babynamek@gmail.com
+
+        </p>
+        <p>
+        <a href="https://www.linkedin.com/in/prince-gobah-0a7554223">linkedin</a> 
+        </p>
+    </div>
     </Fragment>
 }
 
