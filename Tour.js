@@ -13,7 +13,7 @@ function Tour({africa, setCountry}){
           <div><img src={item.flag}
 
         alt="flag"
-        width='50px'
+        width='55px'
          />
         <Link to="./pictures"
         onClick={()=>setCountry(item.country)}
