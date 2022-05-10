@@ -11,9 +11,16 @@ function Pictures({world,country,setCountry}){
         .then((items)=>setCpArray(items))
     },[])
 
+console.log(country)
+function changeCountry(event){
+    setCountry(event.target.value)
+    console.log(country)
+}
 
 
 }
+
+
 
 
 export default Pictures
