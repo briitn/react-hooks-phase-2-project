@@ -18,11 +18,11 @@ function changeCountry(event){
 }
 
 
-
 const rng=Math.random()*1000
 const [bought,setBought]=useState()
 const [price,setPrice]=useState(Math.floor(rng))
 console.log(rng)
+const [isSubmit,setIsSubmit]=useState(false)
 
 }
 
