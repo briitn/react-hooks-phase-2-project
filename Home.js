@@ -10,7 +10,13 @@ function Home(){
         width='250px'
         height={200} />
     </div>
-    
+    <div>
+        <h3>
+            visit <Link to='/tour'> Tour</Link> to see our favorit African Countries
+        </h3>
+
+        <h3>We have affordable tickets to Africa!  Click <Link to='/pictures'>here</Link> to buy tickets</h3>
+    </div>
     </Fragment>
 }
 
