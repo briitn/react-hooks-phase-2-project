@@ -18,6 +18,26 @@ function changeCountry(event){
 }
 
 
+
+
+
+    
+
+    return <div>
+
+
+   <form >
+       <input
+       onChange={changeCountry}
+       type='text'
+       placeholder="country"
+       value={country}
+       />
+       
+   </form>
+   
+       
+    </div>
 }
 
 
