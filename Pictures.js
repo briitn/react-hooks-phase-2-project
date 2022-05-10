@@ -19,25 +19,11 @@ function changeCountry(event){
 
 
 
+const rng=Math.random()*1000
+const [bought,setBought]=useState()
+const [price,setPrice]=useState(Math.floor(rng))
+console.log(rng)
 
-
-    
-
-    return <div>
-
-
-   <form >
-       <input
-       onChange={changeCountry}
-       type='text'
-       placeholder="country"
-       value={country}
-       />
-       
-   </form>
-   
-       
-    </div>
 }
 
 
