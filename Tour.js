@@ -15,7 +15,11 @@ function Tour({africa, setCountry}){
         alt="flag"
         width='50px'
          />
-     
+        <Link to="./pictures"
+        onClick={()=>setCountry(item.country)}
+            
+        >click here to buy tickets for {item.country}
+        </Link>
          </div>
        
 <div>
