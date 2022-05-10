@@ -1,0 +1,46 @@
+
+
+.Home{
+  color: aqua;
+}
+.navbar{
+  text-align: center;
+}
+
+.tooltiptext{
+  visibility: hidden;
+ 
+  top: -5px;
+  left: 105%;
+}
+
+.frica{
+  color: rgb(179, 179, 45);
+}
+
+.image1:hover +.tooltiptext
+{visibility: visible;
+  
+
+}
+.image1:hover{
+  width: 305px;
+}
+
+
+.image2:hover{
+ width: 350px;
+}
+.image2:hover +.tooltiptext
+{visibility: visible;
+  
+
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
