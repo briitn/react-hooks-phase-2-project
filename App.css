@@ -1,10 +1,17 @@
 
-
+.body{
+  background-color:aquamarine;
+}
+.main{
+  background-color: aquamarine;
+}
 .Home{
-  color: aqua;
+  
+  color: aquamarine;
 }
 .navbar{
   text-align: center;
+  background-color: aquamarine;
 }
 
 .tooltiptext{
