@@ -2,8 +2,8 @@
 import './App.css';
 import React, { useState } from 'react';
 import Home from './Home';
-import Tour from './Tour';
-import Pictures from './Pictures';
+import Explore from './Explore';
+import Tickets from './Tickets';
 import NavBar from './NavBar';
 import {countryList, africa} from './Data'
 import {Route, Switch,} from 'react-router-dom'
@@ -18,12 +18,12 @@ function App() {
         <Route exact path="/">
           <Home/>
         </Route>
-        <Route exact path="/tour">
-          <Tour  africa={africa} setCountry={setCountry}/>
+        <Route exact path="/explore">
+          <Explore  africa={africa} setCountry={setCountry}/>
         </Route>
-        <Route exact path="/pictures">
-          <Pictures world={countryList}
-        />
+        <Route exact path="/tickets">
+          <Tickets world={countryList}  country={country}
+       setCountry={setCountry} />
         </Route>
        </Switch>
      
