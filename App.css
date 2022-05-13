@@ -1,4 +1,6 @@
-
+html{
+  background-color:aquamarine;
+}
 #image{
   display: block;
   margin-left: auto;
@@ -6,16 +8,16 @@
   
 
 }
-.body{
-  background-color:aquamarine;
-}
-.main{
-  background-color: aquamarine;
-}
-.Home{
+#ticket{
+text-align: center;
   
-  color: aquamarine;
+  
+  
 }
+#p{
+  color: red;
+}
+
 .navbar{
   text-align: center;
   background-color: aquamarine;
