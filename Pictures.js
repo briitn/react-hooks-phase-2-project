@@ -1,30 +1,9 @@
-import React, {useState, useEffect} from "react";
-
+import React, {useState, useEffect, Fragment} from "react";
 
 
 
 function Pictures({world,country,setCountry}){
-    const [cpArray, setCpArray]=useState([])
-    useEffect(() => {
-        fetch("http://localhost:3000/prices")
-        .then((r)=>r.json())
-        .then((items)=>setCpArray(items))
-    },[])
-
-console.log(country)
-function changeCountry(event){
-    setCountry(event.target.value)
-    console.log(country)
-}
-
-const findCountry=world.find(item=>
-    item===country)
-
-const rng=Math.random()*1000
-const [bought,setBought]=useState()
-const [price,setPrice]=useState(Math.floor(rng))
-console.log(rng)
-const [isSubmit,setIsSubmit]=useState(false)
+    const [isSubmit,setIsSubmit]=useState(false)
 function changeSubmit(e){
     
     e.preventDefault()
@@ -41,7 +20,7 @@ function changeSubmit(e){
       
     ).then((r)=>r.json())
     .then((items)=>cpArray.push(items))
-
+setCountryLength(country.length)
     setIsSubmit(true)}
     setBought(false)
     const test= cpArray.find(item=> (item.country==country))
@@ -52,15 +31,50 @@ if(test===undefined){
 }
     }
 
+    const [cpArray, setCpArray]=useState([])
+    useEffect(() => {
+        fetch("http://localhost:3000/prices")
+        .then((r)=>r.json())
+        .then((items)=>setCpArray(items))
+    },[])
+
+    const [countryLength, setCountryLength]=useState()
+    const [cLength, setClength]=useState(true)
+
+function changeCountry(event){
+    setCountry(event.target.value)
+    if(country.length+1<countryLength){
+        setClength(false)
+    }
+    else if(country.length+1===countryLength){
+        setClength(true)
+    }
+    console.log(country.length+1)
+    console.log(countryLength)
+    if (cLength===false){
+        setIsSubmit(false)
+    }
+
+}
+
+
+const findCountry=world.find(item=>
+    item===country)
+
+const rng=Math.random()*1000
+const [bought,setBought]=useState()
+const [price,setPrice]=useState(Math.floor(rng))
+
+
  
   
 
-console.log(price)
+
 
 
 const formData={
     "country":country,
-    "price":price
+    "price":Math.floor(rng)
 }
 
 
@@ -73,9 +87,16 @@ setBought(true)
 
     
 
-    return <div>
-
-
+    return (
+<Fragment>
+<main className="main">
+<div id="ticket">
+    <h1>
+        TICKET BUYER
+    </h1>
+    <p id='p'
+>Input country to get ticket price
+   </p>
    <form >
        <input
        onChange={changeCountry}
@@ -88,14 +109,17 @@ setBought(true)
    
        {bought?<div>
           <h3>Thanks for your purchase</h3>
-       </div> :isSubmit? 
+       </div> : cLength?isSubmit? 
+       
        <div><h3>Ticket to {country} for ${price}</h3>
        <button onClick={postThis}
 
        >Buy</button></div>
-       :<div><h3>Enter an African country</h3></div>}
+       :<div><h3>Enter an African country</h3></div>:null}
 
     </div>
+    </main>
+    </Fragment>)
 }
 
 
