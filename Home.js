@@ -2,16 +2,17 @@ import React, { Fragment } from "react"
 import { Link } from "react-router-dom"
 
 function Home(){
-    return <Fragment> <div className="Home">
+    return <Fragment>
+        <div className="Home">
        
-        <img src="https://image.shutterstock.com/image-vector/africa-continent-map-ornate-ethnic-260nw-1315315565.jpg"
+        <img id="image" src="https://image.shutterstock.com/z/stock-vector-symbols-of-nature-culture-and-architecture-of-africa-in-the-form-of-a-stylized-map-700057477.jpg"
 
         alt="Cultral African Map"
-        width='250px'
-        height={200} />
-    </div>
-    <div>
-        <h3>
+        width='600px'
+        height={600} />
+              </div>
+             <div>
+          <h3>
             visit <Link to='/tour'> Tour</Link> to see our favorit African Countries
         </h3>
 
@@ -33,6 +34,7 @@ function Home(){
         <a href="https://www.linkedin.com/in/prince-gobah-0a7554223">linkedin</a> 
         </p>
     </div>
+  
     </Fragment>
 }
 
